@@ -126,7 +126,6 @@ public class BreakoutGame extends Activity {
             ball = new Ball(screenX, screenY);
 
             // Load the sounds
-
             // This SoundPool is deprecated but don't worry
             soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
 
