@@ -2,6 +2,7 @@ package amewssoft.breakoutgame;
 
 import android.graphics.RectF;
 
+// Class for creating bricks
 public class Brick {
 
     private RectF rect;

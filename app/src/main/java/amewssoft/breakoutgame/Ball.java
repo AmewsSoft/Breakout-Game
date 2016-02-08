@@ -40,6 +40,8 @@ public class Ball {
         xVelocity = - xVelocity;
     }
 
+    // Checks which horizontal direction the ball is travelling
+    // reverses it if it hits the opposite half of the paddle
     public void setXVelocity(float paddleMiddle, float ballMiddle){
         if((xVelocity > 0 && ballMiddle < paddleMiddle) || (xVelocity < 0 && ballMiddle > paddleMiddle)){
             reverseXVelocity();

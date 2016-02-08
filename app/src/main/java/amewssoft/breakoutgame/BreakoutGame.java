@@ -229,10 +229,11 @@ public class BreakoutGame extends Activity {
 
             // Check for ball colliding with paddle
             if(RectF.intersects(paddle.getRect(),ball.getRect())) {
-                // Log.v("Paddle getRect Left: ", String.valueOf(paddle.getRect().left));
-                // Log.v("Paddle getRect Right: ", String.valueOf(paddle.getRect().right));
+                // Find the current middle position of the paddle
                 float paddleMiddle = (paddle.getRect().left + paddle.getRect().right) / 2;
+                // Find the current middle position of the ball
                 float ballMiddle = (ball.getRect().left + ball.getRect().right) / 2;
+                // Call the setXVelocity method to check which side of the paddle the ball has hit
                 ball.setXVelocity(paddleMiddle, ballMiddle);
                 ball.reverseYVelocity();
                 ball.clearObstacleY(paddle.getRect().top - 2);
